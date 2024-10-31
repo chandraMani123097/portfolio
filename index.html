@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chandramani Singh | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button id="darkModeToggle" class="btn">🌙</button></li>
+        </ul>
+      </nav>
+      <div class="hero">
+        <h1>Chandramani Singh</h1>
+        <p>BCA Final Year Student | Web Developer</p>
+        <a href="#projects" class="btn">View Projects</a>
+      </div>
+    </header>
+
+    <section id="about" class="fade-in">
+      <h2>About Me</h2>
+      <p>
+        I'm a passionate web developer currently pursuing my BCA at Global
+        Institute of Information Technology. I have a strong interest in
+        learning new technologies and building projects that make a difference.
+        My journey in web development started with learning HTML and CSS, and
+        I've since expanded my skills to include JavaScript and React.
+      </p>
+      <p>
+        I believe in continuous learning and often explore new frameworks and
+        libraries to enhance my development skills.
+      </p>
+      <p>Address: Sector 22 Noida 201301</p>
+    </section>
+
+    <section id="projects" class="fade-in">
+      <h2>My Projects</h2>
+      <div class="project-list">
+        <div class="project">
+          <h3>
+            <a
+              href="https://github.com/chandraMani123097/College-projects.git"
+              target="_blank"
+              class="project-title"
+              >College Projects</a
+            >
+          </h3>
+          <p>
+            Explore my various college projects, showcasing my skills in web
+            development.
+          </p>
+        </div>
+        <div class="project">
+          <h3>
+            <a
+              href="https://github.com/chandraMani123097/Amazon-Landing-Page"
+              target="_blank"
+              class="project-title"
+              >Amazon Landing Page</a
+            >
+          </h3>
+          <p>
+            Initial stage of learning HTML and CSS. A simple landing page
+            designed to mimic the Amazon homepage layout.
+          </p>
+        </div>
+        <div class="project">
+          <h3>
+            <a
+              href="https://github.com/chandraMani123097/Tic-Tac-Toe-Game"
+              target="_blank"
+              class="project-title"
+              >Tic Tac Toe Game</a
+            >
+          </h3>
+          <p>
+            A fun Tic Tac Toe game built using HTML, CSS, and JavaScript. Play
+            against a friend or challenge yourself!
+          </p>
+        </div>
+        <div class="project">
+          <h3>
+            <a
+              href="https://github.com/chandraMani123097/Calculator"
+              target="_blank"
+              class="project-title"
+              >Calculator</a
+            >
+          </h3>
+          <p>
+            A fully functional calculator built with HTML, CSS, JS, and React.
+            It performs basic arithmetic operations with a user-friendly
+            interface.
+          </p>
+        </div>
+        <div class="project">
+          <h3>
+            <a
+              href="https://github.com/chandraMani123097/Weather-Chatbot"
+              target="_blank"
+              class="project-title"
+              >Weather Report Chatbot</a
+            >
+          </h3>
+          <p>
+            A chatbot developed using HTML, CSS, and JavaScript, fetching API
+            data to provide weather reports from around the world. Currently, I
+            am working on adding more features such as a currency converter and
+            mathematical calculations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="fade-in">
+      <h2>Contact Me</h2>
+      <div class="contact-details">
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:chandramani.singh107@gmail.com"
+            >chandramani.singh107@gmail.com</a
+          >
+        </p>
+        <p>
+          <i class="fab fa-linkedin"></i>
+          <a
+            href="https://www.linkedin.com/in/chandramani-singh-65240128b"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </p>
+        <p>
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/chandraMani123097" target="_blank"
+            >GitHub</a
+          >
+        </p>
+        <p>
+          <i class="fab fa-twitter"></i>
+          <a href="https://twitter.com/Chandra88174587" target="_blank"
+            >Twitter</a
+          >
+        </p>
+        <p>
+          <i class="fab fa-instagram"></i>
+          <a href="https://instagram.com/chandramani.singh_108" target="_blank"
+            >Instagram</a
+          >
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a> | <a href="#projects">Projects</a> |
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="newsletter">
+        <h3>Subscribe</h3>
+        <input type="email" placeholder="Your email" required />
+        <button class="btn">Subscribe</button>
+      </div>
+      <p>&copy; 2024 Chandramani Singh. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const fadeElements = document.querySelectorAll(".fade-in");
+        fadeElements.forEach((el, index) => {
+          el.style.animationDelay = `${index * 0.2}s`;
+          el.classList.add("fade-in-active");
+        });
+      });
+    </script>
+  </body>
+</html>
