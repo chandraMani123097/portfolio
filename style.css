@@ -1,3 +1,4 @@
+/* Reset Styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,14 +9,17 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background: #f4f4f4;
+  color: #333;
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* Dark Mode */
 body.dark {
-  background: #333;
+  background: #222;
   color: #f4f4f4;
 }
 
+/* Navigation */
 header {
   background: #007bff;
   color: #fff;
@@ -36,8 +40,10 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-weight: bold;
 }
 
+/* Hero Section */
 .hero {
   margin: 20px 0;
 }
@@ -52,7 +58,7 @@ nav ul li a {
   margin: 10px 0;
 }
 
-.btn {
+.hero .btn {
   display: inline-block;
   background: #28a745;
   color: #fff;
@@ -61,21 +67,26 @@ nav ul li a {
   border-radius: 5px;
   text-decoration: none;
   transition: background 0.3s;
+  margin-top: 10px;
+  /* Adjusted top margin */
 }
 
-.btn:hover {
+.hero .btn:hover {
   background: #218838;
 }
 
+/* Sections */
 section {
   padding: 20px;
   text-align: center;
 }
 
+/* Projects Section */
 .project-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .project {
@@ -94,22 +105,20 @@ body.dark .project {
 
 .project-title {
   color: #007bff;
-  /* Color for project titles */
   transition: color 0.3s;
 }
 
 body.dark .project-title {
   color: #1e90ff;
-  /* Light blue color for project titles in dark mode */
 }
 
 .project:hover {
   transform: scale(1.05);
 }
 
+/* Contact Section */
 .contact-details {
   text-align: center;
-  /* Centered contact details */
   margin: 20px 0;
 }
 
@@ -126,9 +135,16 @@ body.dark .project-title {
   margin-right: 8px;
 }
 
+/* Footer */
+footer {
+  padding: 20px;
+  background: #007bff;
+  color: #fff;
+  text-align: center;
+}
+
 .footer-links {
   margin: 10px 0;
-  /* Adjusted margin for footer links */
 }
 
 .footer-links a {
@@ -141,14 +157,17 @@ body.dark .project-title {
   text-decoration: underline;
 }
 
+body.dark .footer-links a {
+  color: #ddd;
+}
+
+/* Newsletter */
 .newsletter {
   margin: 10px 0;
-  /* Adjusted margin for newsletter */
 }
 
 .newsletter h3 {
   margin-bottom: 5px;
-  /* Reduced margin */
 }
 
 .newsletter input {
@@ -157,21 +176,40 @@ body.dark .project-title {
   border: none;
   margin-right: 5px;
   width: 200px;
-  /* Adjust width as needed */
 }
 
 .newsletter button {
   padding: 8px 15px;
 }
 
-.back-to-top {
-  margin: 20px 0;
+/* Welcome Message Animation */
+.welcome-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  opacity: 1;
+  animation: fadeOut 2.5s ease-out forwards;
+  z-index: 1000;
 }
 
-.back-to-top a {
-  text-decoration: none;
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
+/* Fade-in Animation */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -194,9 +232,27 @@ body.dark .project-title {
   }
 }
 
-footer {
-  padding: 20px;
-  background: #007bff;
-  color: #fff;
-  text-align: center;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .footer-links a {
+    display: block;
+    margin: 5px 0;
+  }
 }
